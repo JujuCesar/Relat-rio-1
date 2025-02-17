@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main() {
+    
+    int quantidade;
+    float preco, total;
+
+    // Entrada de dados
+    printf("Digite o número de laranjas compradas: ");
+    scanf("%d", &quantidade);
+    
+    // Processamento de dados
+    if (quantidade < 12) {
+        preco = 0.80;
+    } else {
+        preco = 0.65;
+    }
+
+    // Calcula o valor total
+    total = quantidade * preco;
+    
+    // Exibindo o preço da unidade
+    printf("Valor da unidade: R$ %.2f\n", preco);
+    
+     // Exibe o valor total da compra
+    printf("Valor total da compra: R$ %.2f\n", total);
+    
+    return 0;
+    
+}
