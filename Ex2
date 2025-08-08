@@ -1,10 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main() {
-    
-     int numero;
+    int numero;
 
-    // Entrada de dados com validação
+    // Entrada com validação
     do {
         printf("Digite um número entre 0 e 50: ");
         scanf("%d", &numero);
@@ -14,12 +13,10 @@ int main() {
         }
     } while (numero < 0 || numero > 50);
 
-    // Calcula e exibe o resto da divisão por todos os antecessores maiores que 0
-    printf("Restos da divisão de %d pelos seus antecessores:\n", numero);
-    for (int i = 1; i < numero; i++) {
-        printf("%d %% %d = %d\n", numero, i, numero % i);
+    // Saída
+    for (int i = numero - 1; i >= 1; i--) {
+        printf("Resto da divisao de %d por %d: %d\n", numero, i, numero % i);
     }
 
     return 0;
-    
 }
