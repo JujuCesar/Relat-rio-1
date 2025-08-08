@@ -1,6 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 
-// Criando função para analisar o vetor de numeros
+// Função que analisa os números
 void analisaNumeros(int a, int b, int c, int d, int e) {
     int pares = 0, impares = 0, positivos = 0, negativos = 0;
     int numeros[5] = {a, b, c, d, e};
@@ -18,14 +18,14 @@ void analisaNumeros(int a, int b, int c, int d, int e) {
         } else if (numeros[i] < 0) {
             negativos++;
         }
-        
-    // Saída de dados
-    printf("Pares: %d\n", pares);
-    printf("Ímpares: %d\n", impares);
-    printf("Positivos: %d\n", positivos);
-    printf("Negativos: %d\n", negativos);
+    }
     
-    }}
+    // Saída de dados
+    printf("Quantidade de numeros pares: %d\n", pares);
+    printf("Quantidade de numeros impares: %d\n", impares);
+    printf("Quantidade de numeros positivos: %d\n", positivos);
+    printf("Quantidade de numeros negativos: %d\n", negativos);
+}
 
 int main() {
     int n;
@@ -37,7 +37,6 @@ int main() {
     // Loop para realizar os testes
     for (int i = 0; i < n; i++) {
         int x1, x2, x3, x4, x5;
-        printf("\nTeste %d - Digite 5 números inteiros: ", i + 1);
         scanf("%d %d %d %d %d", &x1, &x2, &x3, &x4, &x5);
 
         // Chamando a função
